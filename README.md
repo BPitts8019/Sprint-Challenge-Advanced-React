@@ -22,23 +22,48 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Why would you use class component over function components (removing hooks from the question)?
-- [ ] Name three lifecycle methods and their purposes.
-- [ ] What is the purpose of a custom hook?
-- [ ] Why is it important to test our apps?
+- [x] Why would you use class component over function components (removing hooks from the question)?
+
+> Class components offer detailed control over what happens during a component's life cycle and 
+> allow for state management. While Hooks greatly reduces the need for class components, it is 
+> definitely worth learning specifically for legacy code maintenance. Much of the current codebase 
+> uses class components, so know how to work with them is essential.
+
+- [x] Name three lifecycle methods and their purposes.
+
+> **componentDidMount** occurs whenever a component is mounted to the virtual DOM. It is guaranteed to 
+> only run once during a components life cycle, as such it is really good for running side-effect 
+> causing operations like API calls.
+> **componentDidUpdate** occurs every time the render method is called. This is a good time to use 
+> the new data in side operations like API calls, but do not set state or you will cause an infinite 
+> loop. 
+> **componentWillUnmount** is the last thing to occur before a component ceases to exist. It is 
+> perfect for performing any cleanup operations, like stopping intervals, in order to prevent memory 
+> leaks and unwanted behavior in the application.
+
+- [x] What is the purpose of a custom hook?
+
+> Custom hooks allow you to write generic non-visual behavior and stateful logic for the purpose of 
+> reuse throughout your application. -It supports DRY coding-
+
+- [x] Why is it important to test our apps?
+
+> Testing is fundamental to programming. Without it, we can't be sure that our programs are running 
+> as we expect them to. Automated testing helps us ensure that previous functionality and features 
+> of our project are not affected by changes made to the program later.
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add TL as collaborator on Github.
-- [ ] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
-- [ ] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
-- [ ] Run `yarn` to download dependencies.
-- [ ] Run the server using `yarn start` or `node server.js`.
-- [ ] In a separate terminal cd into the `client` folder and run `yarn install` to download dependencies.
-- [ ] Still inside the `client` folder run `yarn start` to run the client application.
+- [x] Create a forked copy of this project.
+- [x] Add TL as collaborator on Github.
+- [x] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
+- [x] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
+- [x] Run `yarn` to download dependencies.
+- [x] Run the server using `yarn start` or `node server.js`.
+- [x] In a separate terminal cd into the `client` folder and run `yarn install` to download dependencies.
+- [x] Still inside the `client` folder run `yarn start` to run the client application.
 - [ ] Implement the project on this Branch, **committing progress & changes often.**
 - [ ] Push commits: `git push origin <firstName-lastName>`.
 
