@@ -31,13 +31,13 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [x] Name three lifecycle methods and their purposes.
 
-> **componentDidMount** occurs whenever a component is mounted to the virtual DOM. It is guaranteed to 
+> * **componentDidMount** occurs whenever a component is mounted to the virtual DOM. It is guaranteed to 
 > only run once during a components life cycle, as such it is really good for running side-effect 
 > causing operations like API calls.
-> **componentDidUpdate** occurs every time the render method is called. This is a good time to use 
+> * **componentDidUpdate** occurs every time the render method is called. This is a good time to use 
 > the new data in side operations like API calls, but do not set state or you will cause an infinite 
 > loop. 
-> **componentWillUnmount** is the last thing to occur before a component ceases to exist. It is 
+> * **componentWillUnmount** is the last thing to occur before a component ceases to exist. It is 
 > perfect for performing any cleanup operations, like stopping intervals, in order to prevent memory 
 > leaks and unwanted behavior in the application.
 
