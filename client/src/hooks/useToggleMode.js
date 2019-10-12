@@ -6,7 +6,7 @@ export default function useToggleMode (mode, initialValue, cssClass) {
 
    useEffect(() => {
       document.body.classList.toggle(cssClass, isModeOn);
-   }, [isModeOn]);
+   }, [isModeOn, cssClass]);
 
    return [isModeOn, setIsModeOn];
 }

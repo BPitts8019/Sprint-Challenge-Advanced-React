@@ -27,7 +27,12 @@ class App extends React.Component {
          <div className="App">
             <header className="App-header">
                <h1>This is an App!</h1>
-               <Toggle cssClass="dark-mode" content="Dark Mode" />
+               <Toggle 
+                  mode="plDarkMode"
+                  initialValue = {false}
+                  cssClass="dark-mode" 
+                  content="Dark Mode"
+               />
             </header>
             
             {

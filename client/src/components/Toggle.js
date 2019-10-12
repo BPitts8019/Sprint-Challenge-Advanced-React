@@ -1,12 +1,15 @@
 import React from "react";
+import useToggleMode from "../hooks/useToggleMode";
 
-function Toggle ({cssClass, content}) {
-   const handleToggle = () => {
-      console.log(`Clicked the ${cssClass} toggle.`);
+function Toggle ({mode, initialValue, cssClass, content}) {
+   const [isModeOn, setIsModeOn] = useToggleMode(mode, initialValue, cssClass);
+   const toggleMode = event => {
+      event.preventDefault();
+      setIsModeOn(!isModeOn);
    };
 
    return (
-      <button className="toggle" onClick={handleToggle}>{content}</button>
+      <button className="toggle" onClick={toggleMode}>{content}</button>
    );
 }
 
