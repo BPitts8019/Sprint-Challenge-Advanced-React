@@ -1,12 +1,12 @@
 import React from "react";
 
-function Toggle ({cssClass}) {
+function Toggle ({cssClass, content}) {
    const handleToggle = () => {
       console.log(`Clicked the ${cssClass} toggle.`);
    };
 
    return (
-      <button onClick={handleToggle}>Toggle</button>
+      <button className="toggle" onClick={handleToggle}>{content}</button>
    );
 }
 

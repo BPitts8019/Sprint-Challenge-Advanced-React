@@ -1,9 +1,26 @@
 .App {
    max-width: 1024px;
-   margin: auto 0;
+   margin: 0 auto;
 }
 
 .App header {
    display: flex;
    justify-content: space-between;
+   align-items: center;
+}
+
+.App header .toggle {
+   border-radius: 50px;
+   border: 1px solid black;
+   height: 20px;
+   /* width: 80px; */
+}
+.App header .toggle:hover {
+   background-color: aquamarine;
+   border: 1px solid dodgerblue;
+}
+
+.dark-mode {
+   color: #fff;
+   background-color: #313843;
 }
