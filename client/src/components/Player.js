@@ -1,10 +1,8 @@
 import React from "react";
 
-function Player () {
+function Player ({name, country, searches}) {
    return (
-      <div>
-         
-      </div>
+      <div data-testid="player-card"></div>
    );
 }
 
