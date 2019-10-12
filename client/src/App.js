@@ -15,7 +15,9 @@ class App extends React.Component {
       console.log("App Mounted!")
 
       const response = await axios.get("http://localhost:5000/api/players");
-      this.state.playerList = response.data;
+      await this.setState({
+         playerList: response.data
+      });
       console.log(this.state.playerList);
    }
 
@@ -28,7 +30,7 @@ class App extends React.Component {
             
             {
                (this.state.playerList.length > 0)
-               ?  <PlayerList list={this.state.playerList} />
+               ?  <PlayerList players={this.state.playerList} />
                :  <h3 data-testid="loading">Loading...</h3>
             }
          </div>
