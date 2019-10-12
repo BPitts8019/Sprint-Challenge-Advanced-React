@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from "axios";
 
+import Toggle from "./components/Toggle.js";
 import PlayerList from "./components/PlayerList.js";
 
 class App extends React.Component {
@@ -26,6 +27,7 @@ class App extends React.Component {
          <div className="App">
             <header className="App-header">
                <h1>This is an App!</h1>
+               <Toggle />
             </header>
             
             {
