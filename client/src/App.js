@@ -15,7 +15,8 @@ class App extends React.Component {
       console.log("App Mounted!")
 
       const response = await axios.get("http://localhost:5000/api/players");
-      console.log(response.data);
+      this.state.playerList = response.data;
+      console.log(this.state.playerList);
    }
 
    render () {
