@@ -1,7 +1,9 @@
 import React from "react"
 import * as rtl from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
+
 import PlayerList from "../components/PlayerList";
+afterEach(rtl.cleanup);
 
 test("PlayerList component is rendered will all player cards", () => {
    const list = [
